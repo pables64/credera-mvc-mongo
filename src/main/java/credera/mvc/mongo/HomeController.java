@@ -2,7 +2,6 @@ package credera.mvc.mongo;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import credera.mvc.mongo.config.SpringMongoConfig;
-import credera.mvc.mongo.model.City;
 import credera.mvc.mongo.services.CityService;
 
 /**
@@ -58,9 +56,8 @@ public class HomeController {
 		model.addAttribute("dbName", dbName);
 		
 		//this causes the imbalanced fram stack warning, can potentially crash the server?
-		List<City> cities = cityService.listCities();
 		
-		String dbCities = String.valueOf(cities.size());
+		String dbCities = String.valueOf(cityService.listCities().size());
 		
 		model.addAttribute("dbCities", dbCities);
 		
