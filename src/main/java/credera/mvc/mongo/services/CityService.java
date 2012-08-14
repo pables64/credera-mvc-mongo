@@ -9,5 +9,5 @@ public interface CityService {
 
 	List<City> listCities();
 	
-	City get(String id);
+	City findOne(String id);
 }

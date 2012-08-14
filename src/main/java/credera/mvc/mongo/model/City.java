@@ -4,9 +4,10 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.jdo.annotations.PersistenceCapable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import credera.mvc.mongo.model.CharterDocument;
 
 /**
  * City model object with MongoDB meta-mapping annotations.
@@ -14,13 +15,14 @@ import credera.mvc.mongo.model.CharterDocument;
  * @version 1.0
  */
 @Document(collection = "city")
+@PersistenceCapable
 public class City implements Serializable {
 	private static final long serialVersionUID = 6684888389354589761L;
 	@Id
-	private String id;
-	private String name;
-	private String countryCode;
-	private int population;
+	private String ID;
+	private String Name;
+	private String CountryCode;
+	private int Population;
 	private Date lastModificationDate;
 	private CharterDocument charterDocument;
 
@@ -35,35 +37,35 @@ public class City implements Serializable {
 	public City() {}
 
 	public String getId() {
-		return id;
+		return ID;
 	}
 
 	public void setId(String id) {
-		this.id = id;
+		this.ID = id;
 	}
 
 	public String getName() {
-		return name;
+		return Name;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.Name = name;
 	}
 
 	public String getCountryCode() {
-		return countryCode;
+		return CountryCode;
 	}
 
 	public void setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
+		this.CountryCode = countryCode;
 	}
 
 	public int getPopulation() {
-		return population;
+		return Population;
 	}
 
 	public void setPopulation(int population) {
-		this.population = population;
+		this.Population = population;
 	}
 
 	@Override
@@ -71,15 +73,15 @@ public class City implements Serializable {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		return this.getClass().getSimpleName()
 				+ "|"
-				+ ((this.id == null) ? "no data" : String.valueOf(this.id))
+				+ ((this.ID == null) ? "no data" : String.valueOf(this.ID))
 				+ "|"
-				+ ((this.name == null) ? "no data" : String.valueOf(this.name))
+				+ ((this.Name == null) ? "no data" : String.valueOf(this.Name))
 				+ "|"
-				+ ((this.countryCode == null) ? "no data" : String
-						.valueOf(this.countryCode))
+				+ ((this.CountryCode == null) ? "no data" : String
+						.valueOf(this.CountryCode))
 				+ "|"
-				+ ((this.population == 0) ? "no data" : String
-						.valueOf(this.population));
+				+ ((this.Population == 0) ? "no data" : String
+						.valueOf(this.Population));
 	}
 
 	/**

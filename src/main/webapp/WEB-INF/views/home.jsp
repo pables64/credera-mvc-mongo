@@ -14,5 +14,6 @@
 <P>  The dbname is ${dbName}. </P>
 
 <P>  The db contains this many cities: ${dbCities}. </P>
+
 </body>
 </html>

@@ -19,9 +19,7 @@ public class CityServiceImpl implements CityService {
 	public List<City> listCities(){
 		return cityRepository.findAll();
 	}
-	
-	public City get(String id){
-		return cityRepository.find(id);
-		
+	public City findOne(String id){
+		return cityRepository.findOne(id);
 	}
 }
