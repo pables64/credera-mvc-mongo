@@ -6,6 +6,7 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import credera.mvc.mongo.model.CharterDocument;
 
 /**
  * City model object with MongoDB meta-mapping annotations.
@@ -21,6 +22,7 @@ public class City implements Serializable {
 	private String countryCode;
 	private int population;
 	private Date lastModificationDate;
+	private CharterDocument charterDocument;
 
 	public Date getLastModificationDate() {
 		return lastModificationDate;
@@ -78,6 +80,26 @@ public class City implements Serializable {
 				+ "|"
 				+ ((this.population == 0) ? "no data" : String
 						.valueOf(this.population));
+	}
+
+	/**
+	 *
+	 * getter method for charterDocument
+	 * @return
+	 *
+	 */
+	public CharterDocument getCharterDocument() {
+		return this.charterDocument;
+	}
+
+	/**
+	 *
+	 * setter method for charterDocument
+	 * @param charterDocument
+	 *
+	 */
+	public void setCharterDocument(final CharterDocument charterDocument) {
+		this.charterDocument = charterDocument;
 	}
 
 }

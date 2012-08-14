@@ -8,6 +8,4 @@ public interface CityService {
 	City save(City city);
 
 	List<City> listCities();
-
-
 }
