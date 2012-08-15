@@ -15,5 +15,7 @@
 
 <P>  The db contains this many cities: ${dbCities}. </P>
 
+<p>  One of my favorite cities is <a href="/mongo/cityDetail/50242c2518cde00e8416af02"> this one</a>
+
 </body>
 </html>
