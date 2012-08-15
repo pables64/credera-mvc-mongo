@@ -164,6 +164,9 @@
 		</dependency>
 
 	</dependencies>
+	<scm>
+		<url>http://github.com/pables64/credera-mvc-mongo</url>
+	</scm>
 	<build>
 		<plugins>
 			    <plugin>
