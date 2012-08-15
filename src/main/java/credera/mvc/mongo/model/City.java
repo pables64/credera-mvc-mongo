@@ -14,7 +14,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * 
  * @version 1.0
  */
+//mongo
 @Document(collection = "city")
+//dsl query
 @PersistenceCapable
 public class City implements Serializable {
 	private static final long serialVersionUID = 6684888389354589761L;

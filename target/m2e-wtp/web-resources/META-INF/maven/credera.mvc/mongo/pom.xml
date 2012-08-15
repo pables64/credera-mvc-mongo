@@ -156,49 +156,6 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<!-- just to allow exeuction goals -->
-			<plugin>
-				<groupId>org.eclipse.m2e</groupId>
-				<artifactId>lifecycle-mapping</artifactId>
-				<version>1.0.0</version>
-				<configuration>
-					<lifecycleMappingMetadata>
-						<pluginExecutions>
-							<pluginExecution>
-								<pluginExecutionFilter>
-									<groupId>org.bsc.maven</groupId>
-									<artifactId>maven-processor-plugin</artifactId>
-									<versionRange>[2.0.2,)</versionRange>
-									<goals>
-										<goal>process</goal>
-									</goals>
-								</pluginExecutionFilter>
-								<action>
-									<execute>
-										<runOnIncremental>false</runOnIncremental>
-									</execute>
-								</action>
-							</pluginExecution>
-							<pluginExecution>
-								<pluginExecutionFilter>
-									<groupId>org.bsc.maven</groupId>
-									<artifactId>maven-processor-plugin</artifactId>
-									<versionRange>[2.0.2,)</versionRange>
-									<goals>
-										<goal>process-test</goal>
-									</goals>
-								</pluginExecutionFilter>
-								<action>
-									<execute>
-										<runOnIncremental>false</runOnIncremental>
-									</execute>
-								</action>
-							</pluginExecution>
-						</pluginExecutions>
-					</lifecycleMappingMetadata>
-				</configuration>
-			</plugin>
-			<!-- /to allow execution goals -->
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>maven-apt-plugin</artifactId>
